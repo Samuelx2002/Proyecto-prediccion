@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎰 Casino Santo Tomás - Dashboard</title>
+    <title>Casino Santo Tomás - Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         * {
@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5E936C 0%, #ffffff 100%);
             min-height: 100vh;
             padding: 20px;
         }
@@ -34,7 +34,7 @@
         }
 
         h1 {
-            color: #667eea;
+            color: #5E936C;
             font-size: 2.5em;
             margin-bottom: 10px;
         }
@@ -83,7 +83,7 @@
             flex: 1;
             min-width: 150px;
             padding: 15px;
-            background: #f5f5f5;
+            background: #cacaca;
             border: none;
             border-radius: 8px;
             cursor: pointer;
@@ -93,11 +93,11 @@
         }
 
         .tab:hover {
-            background: #e0e0e0;
+            background: #b6b6b6;
         }
 
         .tab.active {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5E936C 0%, #93DA97 100%);
             color: white;
         }
 
@@ -124,10 +124,10 @@
         }
 
         .card h2 {
-            color: #667eea;
+            color: #5E936C;
             margin-bottom: 20px;
             font-size: 1.8em;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #5E936C;
             padding-bottom: 10px;
         }
 
@@ -153,11 +153,11 @@
 
         input:focus, select:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #5E936C;
         }
 
         button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5E936C 0%, #93DA97 100%);
             color: white;
             padding: 12px 30px;
             border: none;
@@ -172,7 +172,7 @@
 
         button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 5px 15px rgba(94, 147, 108, 0.4);
         }
 
         button:active {
@@ -211,7 +211,7 @@
         }
 
         .result h3 {
-            color: #667eea;
+            color: #5E936C;
             margin-bottom: 15px;
             position: sticky;
             top: 0;
@@ -224,7 +224,7 @@
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 15px;
-            border-left: 5px solid #667eea;
+            border-left: 5px solid #5E936C;
         }
 
         .prediction-header {
@@ -243,7 +243,7 @@
         .stock-number {
             font-size: 2em;
             font-weight: bold;
-            color: #667eea;
+            color: #5E936C;
         }
 
         .chart-container {
@@ -255,7 +255,7 @@
         .loading {
             text-align: center;
             padding: 20px;
-            color: #667eea;
+            color: #5E936C;
             font-size: 18px;
         }
 
@@ -332,7 +332,7 @@
         }
 
         .stat-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5E936C 0%, #93DA97 100%);
             color: white;
             padding: 20px;
             border-radius: 10px;
@@ -374,7 +374,7 @@
         }
 
         .welcome-message {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5E936C 0%, #93DA97 100%);
             color: white;
             padding: 20px;
             border-radius: 10px;
@@ -396,7 +396,7 @@
 
         .quick-action-btn {
             background: white;
-            color: #667eea;
+            color: #5E936C;
             padding: 10px 20px;
             border-radius: 8px;
             cursor: pointer;
@@ -414,36 +414,36 @@
 <body>
     <div class="container">
         <header>
-            <h1>🎰 Casino Santo Tomás</h1>
+            <h1>Casino Santo Tomás</h1>
             <p class="subtitle">Sistema Inteligente de Predicción de Stock con Machine Learning</p>
             <div class="status">
-                <span class="status-badge" id="statusBackend">🔄 Verificando Backend...</span>
-                <span class="status-badge" id="statusML">🔄 Verificando ML API...</span>
+                <span class="status-badge" id="statusBackend">Verificando Backend...</span>
+                <span class="status-badge" id="statusML">Verificando ML API...</span>
             </div>
         </header>
 
         <div class="welcome-message">
-            <h3>👋 Bienvenido al Sistema de Gestión</h3>
+            <h3>Bienvenido al Sistema de Gestión</h3>
             <p>Utiliza la inteligencia artificial para predecir el stock necesario y gestionar tu negocio</p>
             <div class="quick-actions">
-                <button class="quick-action-btn" onclick="switchTab('predictions', event)">🔮 Hacer Predicción</button>
-                <button class="quick-action-btn" onclick="switchTab('sales', event)">💰 Registrar Venta</button>
-                <button class="quick-action-btn" onclick="switchTab('stats', event)">📊 Ver Estadísticas</button>
+                <button class="quick-action-btn" onclick="switchTab('predictions', event)">Hacer Predicción</button>
+                <button class="quick-action-btn" onclick="switchTab('sales', event)">Registrar Venta</button>
+                <button class="quick-action-btn" onclick="switchTab('stats', event)">Ver Estadísticas</button>
             </div>
         </div>
 
         <div class="tabs">
-            <button class="tab active" onclick="switchTab('predictions', event)">📊 Predicciones</button>
-            <button class="tab" onclick="switchTab('products', event)">📦 Productos</button>
-            <button class="tab" onclick="switchTab('sales', event)">💰 Ventas</button>
-            <button class="tab" onclick="switchTab('stats', event)">📈 Estadísticas</button>
+            <button class="tab active" onclick="switchTab('predictions', event)">Predicciones</button>
+            <button class="tab" onclick="switchTab('products', event)">Productos</button>
+            <button class="tab" onclick="switchTab('sales', event)">Ventas</button>
+            <button class="tab" onclick="switchTab('stats', event)">Estadísticas</button>
         </div>
 
         <!-- TAB: PREDICCIONES -->
         <div id="predictions" class="tab-content active">
             <div class="grid">
                 <div class="card">
-                    <h2>🔮 Predicción Individual</h2>
+                    <h2>Predicción Individual</h2>
                     <p style="color: #666; margin-bottom: 20px;">
                         Predice el stock necesario para un producto específico
                     </p>
@@ -451,17 +451,17 @@
                         <label>Producto:</label>
                         <select id="producto">
                             <option value="">Selecciona un producto...</option>
-                            <option value="Café Americano">☕ Café Americano</option>
-                            <option value="Café Latte">☕ Café Latte</option>
-                            <option value="Cappuccino">☕ Cappuccino</option>
-                            <option value="Chocolate Caliente">🍫 Chocolate Caliente</option>
-                            <option value="Té">🍵 Té</option>
-                            <option value="Coca-Cola">🥤 Coca-Cola</option>
-                            <option value="Pepsi">🥤 Pepsi</option>
-                            <option value="Muffin">🧁 Muffin</option>
-                            <option value="Sándwich">🥪 Sándwich</option>
-                            <option value="Papitas">🥔 Papitas</option>
-                            <option value="Suffles">🧁 Souffles</option>
+                            <option value="Café Americano">Café Americano</option>
+                            <option value="Café Latte">Café Latte</option>
+                            <option value="Cappuccino">Cappuccino</option>
+                            <option value="Chocolate Caliente">Chocolate Caliente</option>
+                            <option value="Té">Té</option>
+                            <option value="Coca-Cola">Coca-Cola</option>
+                            <option value="Pepsi">Pepsi</option>
+                            <option value="Muffin">Muffin</option>
+                            <option value="Sándwich">Sándwich</option>
+                            <option value="Papitas">Papitas</option>
+                            <option value="Suffles">Souffles</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -493,24 +493,24 @@
                             <option value="diciembre">Diciembre</option>
                         </select>
                     </div>
-                    <button onclick="predecirIndividual()">🔮 Predecir Stock</button>
+                    <button onclick="predecirIndividual()">Predecir Stock</button>
                     <div class="error" id="errorIndividual"></div>
                     <div class="result" id="resultIndividual"></div>
                 </div>
 
                 <div class="card">
-                    <h2>🎯 Predicción Automática</h2>
+                    <h2>Predicción Automática</h2>
                     <p style="color: #666; margin-bottom: 20px;">
                         Obtén predicciones de stock para <strong>todos los productos</strong> del día actual usando inteligencia artificial.
                     </p>
-                    <button onclick="predecirAutomatico()">🚀 Generar Predicciones del Día</button>
+                    <button onclick="predecirAutomatico()">Generar Predicciones del Día</button>
                     <div class="error" id="errorAuto"></div>
                     <div class="result" id="resultAuto"></div>
                 </div>
             </div>
 
             <div class="card" style="margin-top: 20px;">
-                <h2>📊 Visualización de Predicción</h2>
+                <h2>Visualización de Predicción</h2>
                 <p style="color: #666; margin-bottom: 20px;">
                     Gráfico comparativo entre la cantidad histórica y el stock recomendado
                 </p>
@@ -524,7 +524,7 @@
         <div id="products" class="tab-content">
             <div class="grid">
                 <div class="card">
-                    <h2>➕ Agregar Producto</h2>
+                    <h2>Agregar Producto</h2>
                     <div class="form-group">
                         <label>Nombre:</label>
                         <input type="text" id="nuevoNombre" placeholder="Ej: Jugo de Naranja">
@@ -541,16 +541,16 @@
                             <option value="Snacks">Snacks</option>
                         </select>
                     </div>
-                    <button onclick="agregarProducto()">➕ Agregar Producto</button>
+                    <button onclick="agregarProducto()">Agregar Producto</button>
                     <div class="success" id="successProducto"></div>
                     <div class="error" id="errorProducto"></div>
                 </div>
 
                 <div class="card">
-                    <h2>📦 Lista de Productos</h2>
-                    <button onclick="cargarProductos()">🔄 Actualizar Lista</button>
+                    <h2>Lista de Productos</h2>
+                    <button onclick="cargarProductos()">Actualizar Lista</button>
                     <div class="product-list" id="productList">
-                        <div class="loading">🔄 Cargando productos...</div>
+                        <div class="loading">Cargando productos...</div>
                     </div>
                 </div>
             </div>
@@ -560,7 +560,7 @@
         <div id="sales" class="tab-content">
             <div class="grid">
                 <div class="card">
-                    <h2>💰 Registrar Venta</h2>
+                    <h2>Registrar Venta</h2>
                     <div class="form-group">
                         <label>Producto:</label>
                         <select id="productoVenta">
@@ -574,22 +574,22 @@
                     <div class="form-group">
                         <label>Método de Pago:</label>
                         <select id="metodoPago">
-                            <option value="Efectivo">💵 Efectivo</option>
-                            <option value="Tarjeta">💳 Tarjeta</option>
-                            <option value="Transferencia">🏦 Transferencia</option>
-                            <option value="Junaeb">🎫 Junaeb</option>
+                            <option value="Efectivo">Efectivo</option>
+                            <option value="Tarjeta">Tarjeta</option>
+                            <option value="Transferencia">Transferencia</option>
+                            <option value="Junaeb">Junaeb</option>
                         </select>
                     </div>
-                    <button onclick="registrarVenta()">💰 Registrar Venta</button>
+                    <button onclick="registrarVenta()">Registrar Venta</button>
                     <div class="success" id="successVenta"></div>
                     <div class="error" id="errorVenta"></div>
                 </div>
 
                 <div class="card">
-                    <h2>📜 Últimas Ventas</h2>
-                    <button onclick="cargarVentas()">🔄 Actualizar</button>
+                    <h2>Últimas Ventas</h2>
+                    <button onclick="cargarVentas()">Actualizar</button>
                     <div class="product-list" id="salesList">
-                        <div class="loading">🔄 Cargando ventas...</div>
+                        <div class="loading">Cargando ventas...</div>
                     </div>
                 </div>
             </div>
@@ -598,8 +598,8 @@
         <!-- TAB: ESTADÍSTICAS -->
         <div id="stats" class="tab-content">
             <div class="card">
-                <h2>📊 Estadísticas Generales</h2>
-                <button onclick="cargarEstadisticas()">📈 Cargar Estadísticas</button>
+                <h2>Estadísticas Generales</h2>
+                <button onclick="cargarEstadisticas()">Cargar Estadísticas</button>
                 <div id="statsContent">
                     <div class="loading">Click en "Cargar Estadísticas" para ver los datos</div>
                 </div>
@@ -621,19 +621,19 @@
             try {
                 const backendRes = await fetch('http://localhost:3000/');
                 document.getElementById('statusBackend').className = 'status-badge status-online';
-                document.getElementById('statusBackend').textContent = '✅ Backend Online';
+                document.getElementById('statusBackend').textContent = 'Backend Online';
             } catch (error) {
                 document.getElementById('statusBackend').className = 'status-badge status-offline';
-                document.getElementById('statusBackend').textContent = '❌ Backend Offline';
+                document.getElementById('statusBackend').textContent = 'Backend Offline';
             }
 
             try {
                 const mlRes = await fetch(ML_API_URL);
                 document.getElementById('statusML').className = 'status-badge status-online';
-                document.getElementById('statusML').textContent = '✅ ML API Online';
+                document.getElementById('statusML').textContent = 'ML API Online';
             } catch (error) {
                 document.getElementById('statusML').className = 'status-badge status-offline';
-                document.getElementById('statusML').textContent = '❌ ML API Offline';
+                document.getElementById('statusML').textContent = 'ML API Offline';
             }
         }
 
@@ -671,12 +671,12 @@
             resultDiv.classList.remove('show');
 
             if (!producto) {
-                errorDiv.textContent = '⚠️ Por favor selecciona un producto';
+                errorDiv.textContent = 'Por favor selecciona un producto';
                 errorDiv.classList.add('show');
                 return;
             }
 
-            resultDiv.innerHTML = '<div class="loading">🔄 Consultando al modelo de IA...</div>';
+            resultDiv.innerHTML = '<div class="loading">Consultando al modelo de IA...</div>';
             resultDiv.classList.add('show');
 
             try {
@@ -691,16 +691,16 @@
                 if (data.success) {
                     const pred = data.data;
                     resultDiv.innerHTML = `
-                        <h3>✅ Predicción Exitosa</h3>
+                        <h3>Predicción Exitosa</h3>
                         <div class="prediction-card">
                             <div class="prediction-header">
                                 <span class="product-name">${pred.producto}</span>
                                 <span class="stock-number">${pred.stock_recomendado}</span>
                             </div>
                             <p style="color: #666;">
-                                📦 <strong>Stock Recomendado:</strong> ${pred.stock_recomendado} unidades<br>
-                                📅 <strong>Día:</strong> ${dia_semana.charAt(0).toUpperCase() + dia_semana.slice(1)}<br>
-                                📆 <strong>Mes:</strong> ${mes.charAt(0).toUpperCase() + mes.slice(1)}
+                                <strong>Stock Recomendado:</strong> ${pred.stock_recomendado} unidades<br>
+                                <strong>Día:</strong> ${dia_semana.charAt(0).toUpperCase() + dia_semana.slice(1)}<br>
+                                <strong>Mes:</strong> ${mes.charAt(0).toUpperCase() + mes.slice(1)}
                             </p>
                         </div>
                     `;
@@ -708,12 +708,12 @@
                     // Actualizar gráfico
                     actualizarGrafico(pred);
                 } else {
-                    errorDiv.textContent = '❌ ' + (data.message || 'Error al predecir');
+                    errorDiv.textContent = (data.message || 'Error al predecir');
                     errorDiv.classList.add('show');
                     resultDiv.classList.remove('show');
                 }
             } catch (error) {
-                errorDiv.textContent = '❌ Error de conexión: ' + error.message + '. Asegúrate de que ambos servidores estén corriendo.';
+                errorDiv.textContent = 'Error de conexión: ' + error.message + '. Asegúrate de que ambos servidores estén corriendo.';
                 errorDiv.classList.add('show');
                 resultDiv.classList.remove('show');
             }
@@ -725,7 +725,7 @@
             const resultDiv = document.getElementById('resultAuto');
 
             errorDiv.classList.remove('show');
-            resultDiv.innerHTML = '<div class="loading">🤖 Generando predicciones con IA para todos los productos...</div>';
+            resultDiv.innerHTML = '<div class="loading">Generando predicciones con IA para todos los productos...</div>';
             resultDiv.classList.add('show');
 
             try {
@@ -734,7 +734,7 @@
 
                 if (data.success) {
                     const predictions = data.data.predicciones || data.data.data?.predicciones;
-                    let html = '<h3>📊 Predicciones Generadas</h3>';
+                    let html = '<h3>Predicciones Generadas</h3>';
                     
                     if (predictions && predictions.length > 0) {
                         predictions.forEach(pred => {
@@ -744,7 +744,7 @@
                                         <span class="product-name">${pred.producto}</span>
                                         <span class="stock-number">${pred.stock_recomendado}</span>
                                     </div>
-                                    <p style="color: #666;">📦 unidades recomendadas</p>
+                                    <p style="color: #666;">unidades recomendadas</p>
                                 </div>
                             `;
                         });
@@ -754,12 +754,12 @@
 
                     resultDiv.innerHTML = html;
                 } else {
-                    errorDiv.textContent = '❌ ' + (data.message || 'Error al predecir');
+                    errorDiv.textContent = (data.message || 'Error al predecir');
                     errorDiv.classList.add('show');
                     resultDiv.classList.remove('show');
                 }
             } catch (error) {
-                errorDiv.textContent = '❌ Error de conexión: ' + error.message + '. Verifica que el servidor ML esté corriendo en el puerto 5000.';
+                errorDiv.textContent = 'Error de conexión: ' + error.message + '. Verifica que el servidor ML esté corriendo en el puerto 5000.';
                 errorDiv.classList.add('show');
                 resultDiv.classList.remove('show');
             }
@@ -782,11 +782,11 @@
                         data: [pred.cantidad_historica_usada || 30, pred.stock_recomendado],
                         backgroundColor: [
                             'rgba(54, 162, 235, 0.7)',
-                            'rgba(102, 126, 234, 0.7)'
+                            'rgba(94, 147, 108, 0.7)'
                         ],
                         borderColor: [
                             'rgba(54, 162, 235, 1)',
-                            'rgba(102, 126, 234, 1)'
+                            'rgba(94, 147, 108, 1)'
                         ],
                         borderWidth: 2
                     }]
@@ -818,7 +818,7 @@
         // PRODUCTOS
         async function cargarProductos() {
             const list = document.getElementById('productList');
-            list.innerHTML = '<div class="loading">🔄 Cargando productos...</div>';
+            list.innerHTML = '<div class="loading">Cargando productos...</div>';
 
             try {
                 const response = await fetch(API_URL + '/products');
@@ -834,7 +834,7 @@
                                 <div class="product-item">
                                     <div class="product-info">
                                         <strong>${prod.nombre}</strong><br>
-                                        <small>📁 ${prod.categoria || 'Sin categoría'}</small>
+                                        <small>${prod.categoria || 'Sin categoría'}</small>
                                     </div>
                                     <span class="product-price">$${prod.precio.toLocaleString('es-CL')}</span>
                                 </div>
@@ -843,7 +843,7 @@
                     }
                 }
             } catch (error) {
-                list.innerHTML = '<div class="error show">❌ Error al cargar productos. Verifica que el backend esté corriendo.</div>';
+                list.innerHTML = '<div class="error show">Error al cargar productos. Verifica que el backend esté corriendo.</div>';
             }
         }
 
@@ -859,7 +859,7 @@
             errorDiv.classList.remove('show');
 
             if (!nombre || !precio) {
-                errorDiv.textContent = '⚠️ Por favor completa todos los campos';
+                errorDiv.textContent = 'Por favor completa todos los campos';
                 errorDiv.classList.add('show');
                 return;
             }
@@ -874,18 +874,18 @@
                 const data = await response.json();
 
                 if (data.success) {
-                    successDiv.textContent = '✅ Producto agregado exitosamente';
+                    successDiv.textContent = 'Producto agregado exitosamente';
                     successDiv.classList.add('show');
                     document.getElementById('nuevoNombre').value = '';
                     document.getElementById('nuevoPrecio').value = '';
                     setTimeout(() => successDiv.classList.remove('show'), 3000);
                     cargarProductos();
                 } else {
-                    errorDiv.textContent = '❌ ' + (data.message || 'Error al agregar producto');
+                    errorDiv.textContent = (data.message || 'Error al agregar producto');
                     errorDiv.classList.add('show');
                 }
             } catch (error) {
-                errorDiv.textContent = '❌ Error de conexión: ' + error.message;
+                errorDiv.textContent = 'Error de conexión: ' + error.message;
                 errorDiv.classList.add('show');
             }
         }
@@ -920,7 +920,7 @@
             errorDiv.classList.remove('show');
 
             if (!producto_id) {
-                errorDiv.textContent = '⚠️ Por favor selecciona un producto';
+                errorDiv.textContent = 'Por favor selecciona un producto';
                 errorDiv.classList.add('show');
                 return;
             }
@@ -939,24 +939,24 @@
                 const data = await response.json();
 
                 if (data.success) {
-                    successDiv.textContent = `✅ Venta registrada exitosamente - Total: $${data.data.total.toLocaleString('es-CL')}`;
+                    successDiv.textContent = `Venta registrada exitosamente - Total: $${data.data.total.toLocaleString('es-CL')}`;
                     successDiv.classList.add('show');
                     document.getElementById('cantidadVenta').value = '1';
                     setTimeout(() => successDiv.classList.remove('show'), 3000);
                     cargarVentas();
                 } else {
-                    errorDiv.textContent = '❌ ' + (data.message || 'Error al registrar venta');
+                    errorDiv.textContent = (data.message || 'Error al registrar venta');
                     errorDiv.classList.add('show');
                 }
             } catch (error) {
-                errorDiv.textContent = '❌ Error de conexión: ' + error.message;
+                errorDiv.textContent = 'Error de conexión: ' + error.message;
                 errorDiv.classList.add('show');
             }
         }
 
         async function cargarVentas() {
             const list = document.getElementById('salesList');
-            list.innerHTML = '<div class="loading">🔄 Cargando ventas...</div>';
+            list.innerHTML = '<div class="loading">Cargando ventas...</div>';
 
             try {
                 const response = await fetch(API_URL + '/sales');
@@ -974,8 +974,8 @@
                                 <div class="product-item">
                                     <div class="product-info">
                                         <strong>${venta.producto_nombre || 'Producto'}</strong><br>
-                                        <small>📅 ${fecha}</small><br>
-                                        <small>💳 ${venta.metodo_pago}</small>
+                                        <small>${fecha}</small><br>
+                                        <small>${venta.metodo_pago}</small>
                                     </div>
                                     <div style="text-align: right;">
                                         <div><strong>${venta.cantidad} unidades</strong></div>
@@ -987,14 +987,14 @@
                     }
                 }
             } catch (error) {
-                list.innerHTML = '<div class="error show">❌ Error al cargar ventas</div>';
+                list.innerHTML = '<div class="error show">Error al cargar ventas</div>';
             }
         }
 
         // ESTADÍSTICAS
         async function cargarEstadisticas() {
             const content = document.getElementById('statsContent');
-            content.innerHTML = '<div class="loading">🔄 Cargando estadísticas...</div>';
+            content.innerHTML = '<div class="loading">Cargando estadísticas...</div>';
 
             try {
                 const response = await fetch(API_URL + '/sales/stats');
@@ -1035,8 +1035,8 @@
                                 datasets: [{
                                     label: 'Ventas Totales ($)',
                                     data: productos.map(p => p.total_ventas),
-                                    backgroundColor: 'rgba(102, 126, 234, 0.7)',
-                                    borderColor: 'rgba(102, 126, 234, 1)',
+                                    backgroundColor: 'rgba(94, 147, 108, 0.7)',
+                                    borderColor: 'rgba(94, 147, 108, 1)',
                                     borderWidth: 2
                                 }]
                             },
@@ -1066,7 +1066,7 @@
                     }
                 }
             } catch (error) {
-                content.innerHTML = '<div class="error show">❌ Error al cargar estadísticas: ' + error.message + '</div>';
+                content.innerHTML = '<div class="error show">Error al cargar estadísticas: ' + error.message + '</div>';
             }
         }
 
