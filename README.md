@@ -241,7 +241,12 @@ Ver [GUIA_DE_USO.md](GUIA_DE_USO.md) para más detalles.
 
 ## 👥 Autores
 
-Universidad Santo Tomás - Ingeniería Informática
+Universidad Santo Tomás - Ingeniería Informática:
+- Renato Romo
+- Samuel Carrasco
+- Hayutson Palominos
+- Jorge Lecaro
+- José Cornejo
 
 ---
 
